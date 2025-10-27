@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS Surabaya-Sidoarjo - Peta Interaktif</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <!-- Style eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading" id="loading">
+        <h3>⏳ Memuat data GeoJSON...</h3>
+        <p>Mohon tunggu sebentar</p>
+    </div>
+
+    <div class="container">
+        <div class="error-message" id="errorMessage"></div>
+        <div class="success-message" id="successMessage"></div>
+
+        <div class="header">
+            <h1>🗺️ WebGIS Surabaya - Sidoarjo</h1>
+            <p>Peta Interaktif Data Penduduk dan Jalan Utama - Jawa Timur</p>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>🏙️ Kota/Kabupaten</label>
+                <select id="filterKota">
+                    <option value="all">Semua Wilayah</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>📍 Kecamatan</label>
+                <select id="filterKecamatan">
+                    <option value="all">Semua Kecamatan</option>
+                </select>
+            </div>
+            
+            <button id="resetView">🔄 Reset View</button>
+            <button id="toggleHeatmap">🔥 Toggle Heatmap</button>
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <!-- Leaflet Heat Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+    <!-- Script eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>

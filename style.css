@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #909edd 0%, #509cc8 100%);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.header p {
+    color: #666;
+    font-size: 14px;
+}
+
+.controls {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 200px;
+}
+
+.control-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+}
+
+select, button {
+    padding: 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+select {
+    background: white;
+}
+
+select:hover, select:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    font-weight: 600;
+    height: 42px;
+}
+
+button:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+button.active {
+    background: #e74c3c;
+}
+
+.map-container {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#map {
+    height: 600px;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.legend {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    line-height: 1.8;
+    font-size: 12px;
+}
+
+.legend h4 {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.8;
+    border: 1px solid #ccc;
+}
+
+.coord-display {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.info-box {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 250px;
+}
+
+.info-box h4 {
+    margin-bottom: 8px;
+    color: #667eea;
+}
+
+.leaflet-popup-content {
+    margin: 15px;
+    font-size: 13px;
+}
+
+.leaflet-popup-content h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.leaflet-popup-content p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.leaflet-popup-content strong {
+    color: #333;
+}
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 9999;
+    display: none;
+    text-align: center;
+}
+
+.loading.show {
+    display: block;
+}
+
+.loading h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.error-message, .success-message {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+    font-weight: 500;
+}
+
+.error-message {
+    background: #ff6b6b;
+    color: white;
+}
+
+.success-message {
+    background: #51cf66;
+    color: white;
+}
+
+.error-message.show, .success-message.show {
+    display: block;
+}
